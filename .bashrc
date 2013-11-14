@@ -100,12 +100,11 @@ alias ll='ls -hlF'
 alias l='ls -lahF'
 
 alias s2='subl2'
-alias s3='subl3'
-alias s='s3'
+alias s='subl'
 alias s.='s .'
 alias webserver='python -m SimpleHTTPServer'
 
-export EDITOR='subl3 -w'
+export EDITOR='subl -w'
 
 alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias pgstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
