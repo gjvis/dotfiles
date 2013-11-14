@@ -1,0 +1,16 @@
+set completion-ignore-case on # ignore case on tab completion
+set bell-style none # no bell
+set show-all-if-ambiguous On # show list automatically, without double tab
+
+# Allow UTF-8 input and output, instead of showing stuff like $'\0123\0456'
+set input-meta on
+set output-meta on
+set convert-meta off
+
+# navigate word boundaries using alt-left/right arrow
+"\e[1;9D": backward-word
+"\e[1;9C": forward-word
+
+# Better history search, with up/down arrows
+"\e[A":history-search-backward
+"\e[B":history-search-forward
