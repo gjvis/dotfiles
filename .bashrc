@@ -7,8 +7,8 @@ if [ -d /usr/local/lib/node_modules ]; then
   PATH=$PATH:/usr/local/share/npm/bin
 fi
 
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-  . `brew --prefix`/etc/bash_completion
+if [ -x $(which brew) ] && [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
 fi
 
 export HISTCONTROL=ignoredups
