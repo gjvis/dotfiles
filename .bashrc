@@ -7,7 +7,7 @@ if [ -d /usr/local/lib/node_modules ]; then
   PATH=$PATH:/usr/local/share/npm/bin
 fi
 
-if [ -x $(which brew) ] && [ -f $(brew --prefix)/etc/bash_completion ]; then
+if [ -x "$(which brew)" ] && [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
 
@@ -84,12 +84,12 @@ function setup_prompt {
   echo -ne "\033]0;${USER}@${HOSTNAME%%.*}"
   echo -ne "\007"
 
-  PS1="${BLUE}\w${COLOUR_NONE} ${BRANCH}> "
+  PS1="${LIGHT_GRAY}[${HOSTNAME}] ${BLUE}\w${COLOUR_NONE} ${BRANCH}> "
 }
 
 export PROMPT_COMMAND=setup_prompt
 
-export PS1="${BLUE}\w${COLOUR_NONE} ${BRANCH}> "  # Primary prompt with only a path
+export PS1="${LIGHT_GRAY}[${HOSTNAME}] ${BLUE}\w${COLOUR_NONE} ${BRANCH}> "  # Primary prompt with only a path
 export PS2='> '    # Secondary prompt
 export PS3='#? '   # Prompt 3
 export PS4='+'     # Prompt 4
