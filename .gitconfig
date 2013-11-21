@@ -53,4 +53,4 @@
   insteadOf = "gjvis:"
 
 [include]
-  path = ~/.git_private_config
+  path = ~/.dotfilesPrivate/.gitconfig
