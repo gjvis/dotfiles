@@ -104,6 +104,9 @@ export PS4='+'     # Prompt 4
 
 alias ..='cd ..'
 alias ...='cd .. ; cd ..'
+alias ....='cd .. ; cd .. ; cd ..'
+alias .....='cd .. ; cd .. ; cd .. ; cd ..'
+
 alias ll='ls -hlF'
 alias l='ls -lahF'
 
