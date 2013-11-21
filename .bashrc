@@ -12,7 +12,15 @@ if [ -x "$(which brew)" ] && [ -f $(brew --prefix)/etc/bash_completion ]; then
 fi
 
 export HISTCONTROL=ignoredups
-export CLICOLOR=1
+
+if [ "$TERM" != "dumb" ]; then
+    if [ `uname` == "Darwin" ]; then
+       alias ls='ls -G'
+    else
+       # eval "`dircolors -b`"
+       alias ls='ls --color=auto'
+    fi
+fi
 
 RED="\[\033[0;31m\]"
 YELLOW="\[\033[0;33m\]"
