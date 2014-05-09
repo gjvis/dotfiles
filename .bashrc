@@ -11,23 +11,12 @@ if [ -d /usr/local/go/bin ]; then
   PATH=$PATH:/usr/local/go/bin
 fi
 
-if [ -x "$(which brew)" ] && [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
-fi
-
 if [ -d /usr/local/heroku/bin ]; then
   PATH=$PATH:/usr/local/heroku/bin
 fi
 
-export HISTCONTROL=ignoredups
-
-if [ "$TERM" != "dumb" ]; then
-    if [ `uname` == "Darwin" ]; then
-       alias ls='ls -G'
-    else
-       # eval "`dircolors -b`"
-       alias ls='ls --color=auto'
-    fi
+if [ -x "$(which brew)" ] && [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
 fi
 
 RED="\[\033[0;31m\]"
@@ -110,20 +99,31 @@ export PS2='> '    # Secondary prompt
 export PS3='#? '   # Prompt 3
 export PS4='+'     # Prompt 4
 
+export HISTCONTROL=ignoredups
+export EDITOR='subl -w'
+
+if [ "$TERM" != "dumb" ]; then
+    if [ `uname` == "Darwin" ]; then
+       alias ls='ls -G'
+    else
+       # eval "`dircolors -b`"
+       alias ls='ls --color=auto'
+    fi
+fi
+
+alias ll='ls -hlF'
+alias l='ls -lahF'
+
 alias ..='cd ..'
 alias ...='cd .. ; cd ..'
 alias ....='cd .. ; cd .. ; cd ..'
 alias .....='cd .. ; cd .. ; cd .. ; cd ..'
 
-alias ll='ls -hlF'
-alias l='ls -lahF'
-
 alias s2='subl2'
 alias s='subl'
 alias s.='s .'
-alias webserver='python -m SimpleHTTPServer'
 
-export EDITOR='subl -w'
+alias webserver='python -m SimpleHTTPServer'
 
 alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias pgstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
