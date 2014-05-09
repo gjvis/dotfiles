@@ -7,6 +7,10 @@ if [ -d /usr/local/lib/node_modules ]; then
   PATH=$PATH:/usr/local/share/npm/bin
 fi
 
+if [ -d /usr/local/go/bin ]; then
+  PATH=$PATH:/usr/local/go/bin
+fi
+
 if [ -x "$(which brew)" ] && [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
