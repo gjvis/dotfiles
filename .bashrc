@@ -130,6 +130,10 @@ alias pgstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 
 alias be="bundle exec"
 
+if [ -f $HOME/.bashrc-local ]; then
+  source $HOME/.bashrc-local
+fi
+
 if [ -f $HOME/.rvm/bin/rvm ]; then
   # This MUST be last for RVM to function correctly
   [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
