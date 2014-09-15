@@ -54,5 +54,8 @@
 [url "git@github.com:gjvis/"]
   insteadOf = "gjvis:"
 
+[url "git@github.com:guidance-guarantee-programme/"]
+  insteadOf = "ggp:"
+
 [include]
   path = ~/.dotfilesPrivate/.gitconfig
