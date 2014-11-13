@@ -57,5 +57,8 @@
 [url "git@github.com:guidance-guarantee-programme/"]
   insteadOf = "ggp:"
 
+[url "git@heroku.com:"]
+  insteadOf = "heroku:"
+
 [include]
   path = ~/.dotfilesPrivate/.gitconfig
