@@ -123,7 +123,7 @@ alias s2='subl2'
 alias s='subl'
 alias s.='s .'
 
-alias webserver='python -m SimpleHTTPServer'
+alias webserver='open http://localhost:8080; ruby -run -e httpd . --port=8080'
 
 alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias pgstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
