@@ -5,6 +5,9 @@
 [rebase]
   autosquash = true
 
+[push]
+  default = simple
+
 [alias]
   st = status
   ci = commit
@@ -47,9 +50,6 @@
 
 [color "branch"]
   remote = yellow
-
-[push]
-  default = simple
 
 [url "git@github.com:moneyadviceservice/"]
   insteadOf = "mas:"
