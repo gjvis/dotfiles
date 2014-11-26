@@ -2,6 +2,9 @@
   editor = subl -w
   excludesfile = ~/.gitignore_global
 
+[rebase]
+  autosquash = true
+
 [alias]
   st = status
   ci = commit
