@@ -123,6 +123,8 @@ alias s2='subl2'
 alias s='subl'
 alias s.='s .'
 
+alias trim="tr -d '\n'"
+
 alias webserver='open http://localhost:8080; ruby -run -e httpd . --port=8080'
 
 alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
@@ -150,4 +152,12 @@ if [ -d $HOME/.pyenv/bin ]; then
   export PYENV_ROOT="$HOME/.pyenv"
   export PATH="$PYENV_ROOT/bin:$PATH"
   eval "$(pyenv init -)"
+fi
+
+if [ -x "$(which virtualenvwrapper_lazy.sh)" ]; then
+  export WORKON_HOME=$HOME/.virtualenvs
+  export PROJECT_HOME=$HOME/dev
+  export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
+  export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+  source "$(which virtualenvwrapper_lazy.sh)"
 fi
