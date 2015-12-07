@@ -152,12 +152,5 @@ if [ -d $HOME/.pyenv/bin ]; then
   export PYENV_ROOT="$HOME/.pyenv"
   export PATH="$PYENV_ROOT/bin:$PATH"
   eval "$(pyenv init -)"
-fi
-
-if [ -x "$(which virtualenvwrapper_lazy.sh)" ]; then
-  export WORKON_HOME=$HOME/.virtualenvs
-  export PROJECT_HOME=$HOME/dev
-  export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
-  export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-  source "$(which virtualenvwrapper_lazy.sh)"
+  pyenv virtualenvwrapper_lazy
 fi
