@@ -18,6 +18,7 @@ RELATIVE_TIME="%Cgreen(%ar)%Creset"
 AUTHOR="%C(bold blue)<%an>%Creset"
 REFS="%C(red)%d%Creset"
 SUBJECT="%s"
+COLUMNS=$(tput cols)
 
 FORMAT="$HASH}$RELATIVE_TIME}$AUTHOR}$REFS $SUBJECT"
 
@@ -32,6 +33,8 @@ pretty_git_log() {
         sed -Ee 's/(^[^<]*) ago\)/\1)/' |
         # Replace (2 years, 5 months) with (2 years)
         sed -Ee 's/(^[^<]*), [[:digit:]]+ .*months?\)/\1)/' |
+        # Kill long lines
+        cut -c 1-$COLUMNS |
         # Line columns up based on } delimiter
         column -s '}' -t |
         # Page only if we need to
