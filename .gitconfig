@@ -5,6 +5,9 @@
 [rebase]
   autosquash = true
 
+[pull]
+  ff = only
+
 [push]
   default = simple
 
