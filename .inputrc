@@ -12,10 +12,6 @@ set input-meta on
 set output-meta on
 set convert-meta off
 
-# navigate word boundaries using alt-left/right arrow
-"\e[1;9D": backward-word
-"\e[1;9C": forward-word
-
 # Better history search, with up/down arrows
 "\e[A":history-search-backward
 "\e[B":history-search-forward
