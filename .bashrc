@@ -154,3 +154,6 @@ if [ -d $HOME/.pyenv/bin ]; then
   eval "$(pyenv init -)"
   pyenv virtualenvwrapper_lazy
 fi
+
+export NVM_DIR="/Users/gareth/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
