@@ -70,5 +70,8 @@
 [url "git@github.com:lm-tools/"]
   insteadOf = "lmt:"
 
+[url "git@github.com:snyk/"]
+  insteadOf = "snyk:"
+
 [include]
   path = ~/.dotfilesPrivate/.gitconfig
