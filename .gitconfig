@@ -11,6 +11,10 @@
 [push]
   default = simple
 
+[commit]
+  cleanup = scissors
+
+
 [alias]
   st = status
   cb = checkout -b
