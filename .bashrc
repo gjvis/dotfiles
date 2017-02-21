@@ -84,11 +84,6 @@ function setup_prompt {
     BRANCH=''
   fi
 
-  # This runs before the prompt and sets the title of the xterm* window.  If you set the title in the prompt
-  # weird wrapping errors occur on some systems, so this method is superior
-  echo -ne "\033]0;${USER}@${HOSTNAME%%.*}"
-  echo -ne "\007"
-
   PS1="${LIGHT_GRAY}[${HOSTNAME}] ${BLUE}\w${COLOUR_NONE} ${BRANCH}> "
 }
 
