@@ -4,3 +4,5 @@
 bundler_stubs/
 .powrc
 .powenv
+*.sublime-project
+*.sublime-workspace
