@@ -94,7 +94,7 @@ export PS2='> '    # Secondary prompt
 export PS3='#? '   # Prompt 3
 export PS4='+'     # Prompt 4
 
-export HISTCONTROL=ignoredups
+export HISTCONTROL=ignoreboth
 export EDITOR='subl -w'
 
 if [ "$TERM" != "dumb" ]; then
