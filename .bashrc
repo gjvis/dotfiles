@@ -84,12 +84,12 @@ function setup_prompt {
     BRANCH=''
   fi
 
-  PS1="${LIGHT_GRAY}[${HOSTNAME}] ${BLUE}\w${COLOUR_NONE} ${BRANCH}> "
+  PS1="${LIGHT_GRAY} ${BLUE}\w${COLOUR_NONE} ${BRANCH}> "
 }
 
 export PROMPT_COMMAND=setup_prompt
 
-export PS1="${LIGHT_GRAY}[${HOSTNAME}] ${BLUE}\w${COLOUR_NONE} ${BRANCH}> "  # Primary prompt with only a path
+export PS1="${LIGHT_GRAY} ${BLUE}\w${COLOUR_NONE} ${BRANCH}> "  # Primary prompt with only a path
 export PS2='> '    # Secondary prompt
 export PS3='#? '   # Prompt 3
 export PS4='+'     # Prompt 4
