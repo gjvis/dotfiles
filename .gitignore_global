@@ -6,3 +6,4 @@ bundler_stubs/
 .powenv
 *.sublime-project
 *.sublime-workspace
+.vscode
