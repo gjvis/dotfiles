@@ -31,7 +31,7 @@
   mff = merge --ff-only
   apply-gitignore = !git ls-files -ci --exclude-standard -z | xargs -0 git rm --cached
   fpush = push --force-with-lease
-  boom = reset --hard
+  boom = reset --hard @{u}
 
   # Fancy logging.
   #   h = head
