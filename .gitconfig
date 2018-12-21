@@ -5,6 +5,9 @@
 [rebase]
   autosquash = true
 
+[fetch]
+  prune = true
+
 [pull]
   ff = only
 
